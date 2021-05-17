@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Title -->
+    <title>PianoKeys</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:200,400,600" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="CSS/index.css" />
+  </head>
+  <style>
+  #form-body {
+    box-sizing: border-box;
+    background-color: #161616;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #fff;
+  }
+  </style>
+  <body id="form-body">
+    <!-- Form Start -->
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Create Account</h2>
+        </div>
+        <form class="register-form" id="register-form" method="POST" action="homepage.html" onsubmit="return checkInputs();" >
+            <div class="form-control">
+                <label>Username</label>
+                <input type="text" placeholder="Username" id="username" onkeypress="clearMsg('age-error')" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <p id="age-error">Error message</p>
+            </div>
+            <div class="form-control">
+                <label>Email</label>
+                <input type="text" placeholder="Email" id="email" onkeypress="clearMsg('email-error')" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <p id="email-error">Error message</p>
+            </div>
+            <div class="form-control">
+                <label>Password</label>
+                <input type="password" placeholder="Password" id="password" onkeypress="clearMsg('password-error')" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <p id="password-error">Error message</p>
+            </div>
+            <div class="form-control">
+                <label>Age</label>
+                <input type="tel" placeholder="Age" id="age" onkeypress="clearMsg('age-error')"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <p id="age-error">Error message</p>
+            </div>
+            <p id="content"></p>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <!-- Form End -->
+    <!-- Script -->
+    <script type="text/javascript" src="JS/index.js"></script>
+  </body>
+</html>
